@@ -27,8 +27,8 @@ This game has dependencies with Jquery and Jquery UI.
 You can point the files below to the current CDN (Google.com and Jquery.com) or download these libraries and install them in your /js/-folder to run the game independent from the internet.
 
 ///// DEPENDENCIES /////
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+* jquery/3.2.1/jquery.min.js
+* 1.12.1/jquery-ui.js
 
 ## Tests
 

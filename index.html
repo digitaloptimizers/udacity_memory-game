@@ -2,10 +2,14 @@
 <html>
   <head lang="EN">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
-    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- CSS styling -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/styles.css">
+
   </head>
   <body>
 
@@ -13,29 +17,40 @@
       <h1>Matching Game</h1>
 
       <div class="status">
-        <div class="stars">Your level:
+        <div class="stars star_ranking">Your level:
           <i class="material-icons">star_rate</i>
           <i class="material-icons">star_rate</i>
           <i class="material-icons">star_rate</i>
           <span id="nr_of_moves"><span></span></span>
         </div>
-        <div><a href="javascript:void(0);" class="retry"><i class="material-icons">autorenew</i> Retry</a></div>
+        <div><a href="javascript:reset_game();"><i class="material-icons">autorenew</i> Retry</a></div>
       </div>
-      <div class="board">
-        <div class="game_over">
-            <h2>CONGRATULATIONS!</h2>
-            <p>
-              You finished the game in <span id="timed"></span> seconds
-              and have used <span id="counts"></span> moves.<br />
-              <br />You've earned the title:
-            </p>
-            <h4 id="rank">&nbsp;</h4>
-            <a href="javascript:void(0);" class="retry">Another game?</a>
-        </div>
+      <div class="board"></div>
+
+      <!-- GAME FINISHED modalbox -->
+      <div class="modal-content game_over" id="dialog">
+          <h2>CONGRATULATIONS!</h2>
+          <span class="close retry">&times;</span>
+          <p>
+            You finished the game in <span id="timed"></span> seconds
+            and have used <span id="counts"></span> moves.<br />
+            <br />
+            You've earned the title:
+          </p>
+          <h4 id="rank">&nbsp;</h4>
+          <div class="stars star_result">
+            <i class="material-icons">star_rate</i>
+            <i class="material-icons">star_rate</i>
+            <i class="material-icons">star_rate</i>
+          </div>
+          <br />
+          <a href="javascript:reset_game();" class="do-over">Another game?</a>
+          <br /><br /><div class="last_score"></div>
       </div>
 
     </div>
 
+    <!-- javascripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/script.js"></script>
